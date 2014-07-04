@@ -29,8 +29,11 @@ var Game = {
 	
 	start: function() {
 		console.log('start');
-		
 		Game.water = Crafty.e("Water");
+		
+		Game.fish = Crafty.e("Fish");
+		Game.fish.x = -Game.fish.w;
+		Game.fish.y = Game.waterSurface() + 200;
 		
 		Crafty.scene('Menu');
 	},
@@ -45,18 +48,31 @@ Crafty.scene('Menu', function(){
 		$("#title").hide("slide", { direction: "right" }, 900);
 		$("#clickToStart").hide("slide", { direction: "right" }, 600);
 		
-		Game.fish = Crafty.e("Fish");
-		
-		Tween.get(Game.fish).to({x: 100}, 1000).call(Crafty.scene('Game'));
+		//Game.fish._velocity = 1000;
+		Crafty.scene('Game');
 	});
 	
+	
+		
+	this.bind("EnterFrame", function(data){
+		createjs.Tween.tick(data.dt/1000, false);
+	});
 });
 
 
 Crafty.scene('Game', function(){
 	
+	var airborn = false;
+	//Game.fish.tween({x: 50}, 2000);
+	
+	createjs.Tween.get(Crafty.viewport).to({y: -(Game.fish.y / 4)}, 2).wait(0.5).call(function(){ airborn = true; });
+	createjs.Tween.get(Game.fish).wait(2).to({x: 50}, 2, createjs.Ease.quadOut);
+	createjs.Tween.get(Game.fish._velocity).wait(1.5).to({y: 300}, 2, createjs.Ease.quadOut);
+	
+	
+	
 	Crafty.addEvent(this, $("#gameContainer")[0], 'mousedown', function(e) {
-		console.log('mousedown at (' + e.clientX + ', ' + e.clientY + ')');
+		
 	});
 	
 	
@@ -67,10 +83,15 @@ Crafty.scene('Game', function(){
 	{
 		var deltaTime = data.dt / 1000;
 		
+		createjs.Tween.tick(deltaTime, false);
+		
 		//console.log(Crafty.lastEvent);
 		
 		// Make the ocean come up to meet the fish
-		Crafty.viewport.y = -(Game.fish.y / 4);
+		if(airborn){
+			Crafty.viewport.y = -(Game.fish.y / 4);
+		}
+		//createjs.Tween.get(Crafty.viewport).to({y: -(Game.fish.y / 4)}, 1);
 	});
 });
 

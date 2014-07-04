@@ -5,7 +5,7 @@ Crafty.c("Fish", {
 	_velocity: {x: 0, y:0},
 	
 	init: function(){
-		this.requires('2D, Canvas, Color, Collision, Persist')
+		this.requires('2D, Canvas, Color, Collision, Persist, Tween')
 			.attr({
 				x: 30,
 				y: 10,
@@ -32,7 +32,7 @@ Crafty.c("Fish", {
 
 Crafty.c("Water", {
 	init: function(){
-		this.requires('2D, Canvas, Color, Persist')
+		this.requires('2D, Canvas, Color, Persist, Tween')
 			.attr({
 				x: 0,
 				y: Game.waterSurface(),
