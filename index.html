@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Skippy Fish</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/handlebars.js"></script>
+	<script type="text/javascript" src="lib/crafty.js"></script>
+	
+	<script type="text/javascript" src="src/components.js"></script>
+	<script type="text/javascript" src="src/game.js"></script>
+	
+</head>
+<body>
+
+	<div id="gameContainer">
+		<canvas id="viewport"></canvas>
+		
+		<div id="HUD" class="container-fluid">
+			
+		</div>
+		
+	</div>
+	
+	
+	<script type="application/javascript">
+		Game.load();
+		
+		$(document).ready(function()
+		{
+			Game.start();
+		});
+	
+	</script>
+
+</body>
+</html>
