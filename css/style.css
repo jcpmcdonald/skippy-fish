@@ -18,3 +18,21 @@
 	width: 100%;
 	top: 0;
 }
+
+#title
+{
+	margin-top: 50px;
+	font-size: 50px;
+	text-align: center;
+	color: whitesmoke;
+	font-family: 'Lobster', cursive;
+}
+
+#clickToStart
+{
+	margin-top: 80px;
+	font-size: 20px;
+	text-align: center;
+	color: whitesmoke;
+	font-family: 'Lobster', cursive;
+}

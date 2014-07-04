@@ -4,14 +4,17 @@
 	<meta charset="utf-8" />
 	<title>Skippy Fish</title>
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
-	<!--link rel="stylesheet" type="text/css" href="css/bootstrap.css" /-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	
 	<script type="text/javascript" src="lib/jquery.js"></script>
-	<!--script type="text/javascript" src="lib/bootstrap.js"></script-->
+	<script type="text/javascript" src="lib/bootstrap.js"></script>
 	<script type="text/javascript" src="lib/handlebars.js"></script>
 	<script type="text/javascript" src="lib/crafty.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui.js"></script>
+	<script type="text/javascript" src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
 	
 	<script type="text/javascript" src="src/components.js"></script>
 	<script type="text/javascript" src="src/game.js"></script>
@@ -22,9 +25,10 @@
 	<div id="gameContainer">
 		<div id="viewport"></div>
 		
-		<!--div id="HUD" class="container-fluid">
-			
-		</div-->
+		<div id="HUD" class="container-fluid">
+			<div id="title" style="display: none">Skippy Fish</div>
+			<div id="clickToStart" style="display: none">(click anywhere to start)</div>
+		</div>
 		
 	</div>
 	

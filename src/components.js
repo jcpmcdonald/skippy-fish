@@ -1,33 +1,47 @@
 
 
 Crafty.c("Fish", {
+	_acceleration: -200,
+	_velocity: {x: 0, y:0},
+	
 	init: function(){
-		this.requires('2D, Canvas, Color, Gravity, Collision')
+		this.requires('2D, Canvas, Color, Collision, Persist')
 			.attr({
 				x: 30,
 				y: 10,
 				w: 80,
 				h: 30
 			})
-			.color('rgb(255, 125, 40)')
-			.gravity();
+			.color('rgb(255, 125, 40)');
 		
+		this.bind("EnterFrame", this.update);
 	},
 	
+	update: function(data){
+		var deltaTime = (data.dt/ 1000);
+		this._velocity.y += (this._acceleration * deltaTime);
+		this.y -= (this._velocity.y * deltaTime);
+		
+		if(this._velocity.y < 0 && this.y + this.h >= Game.waterSurface()){
+			this._velocity.y = -this._velocity.y * 0.9;
+		}
+	},
 	
 });
 
 
 Crafty.c("Water", {
 	init: function(){
-		this.requires('2D, Canvas, Color')
+		this.requires('2D, Canvas, Color, Persist')
 			.attr({
 				x: 0,
-				y: Game.height() - 150,
+				y: Game.waterSurface(),
 				w: Game.width(),
-				h: 150
+				h: Game.height() - Game.waterSurface() + 300
 			})
-			.color('rgb(0, 0, 180)');
+			.color('#004F98');
 	},
 	
 });
+
+
