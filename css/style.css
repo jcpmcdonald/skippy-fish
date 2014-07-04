@@ -1,0 +1,20 @@
+
+#gameContainer
+{
+	height: 500px;
+	position: relative;
+	width: 800px;
+}
+#viewport
+{
+	height: 100%;
+	width: 100%;
+}
+#HUD
+{
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
