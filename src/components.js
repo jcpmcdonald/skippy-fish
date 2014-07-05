@@ -13,14 +13,24 @@ Crafty.c("Fish", {
 	maxHeight: 0,
 	
 	init: function(){
-		this.requires('2D, Canvas, Color, Collision, Persist')
+		this.requires('2D, Canvas, Collision, Persist, spr_fish, SpriteAnimation')
 			.attr({
 				x: 30,
 				y: 10,
 				w: 80,
 				h: 30
 			})
-			.color('rgb(255, 125, 40)');
+			.reel('tailStraight', 10, 0, 0, 1)
+			.reel('tailUp', 10, 1, 0, 1)
+			.reel('tailDown', 10, 2, 0, 1)
+			.reel('swim', 400, [[0,0], [1,0], [2,0]])
+			.reel('swimFast', 300, [[0,0], [1,0], [2,0]])
+			.reel('skip', 200, [[0,0], [1,0], [2,0]])
+			.reel('scaredSwim', 300, [[0,1], [1,1], [2,1]])
+			//.animate('tailDown')
+			;
+		
+		this.animate('swim', -1);
 		
 		this.bind("EnterFrame", this.update);
 	},
@@ -45,7 +55,7 @@ Crafty.c("Fish", {
 			this.airbornOnce = true;
 			if(this._velocity.y > 0)
 			{
-				console.log("skip reset");
+				//console.log("skip reset");
 				this.skippedThisFall = false;
 			}
 		}
@@ -54,14 +64,16 @@ Crafty.c("Fish", {
 			this.dead = true;
 		}
 		
-		if(this.skip){
+		if(this.skip && !this.dead){
 			this.skip = false;
 			
 			if(this.airbornOnce && !this.skippedThisFall){
+				this.animate("skip", 1);
+				
 				var percentPerfect = 1 - (Math.abs(depth - 10) / 20);
 				
 				if(this._velocity.y < 0 && depth < 30 && depth > -10){
-					this._velocity.y = -(this._velocity.y * 1.2 * percentPerfect);
+					this._velocity.y = -(this._velocity.y * 1.4 * percentPerfect) - 30;
 					
 					var jumpQuality = "";
 					if(percentPerfect > 0.90){
@@ -85,7 +97,7 @@ Crafty.c("Fish", {
 					$("#jumpQuality").fadeOut(800);
 					
 					
-					console.dir({depth: depth, percentPerfect: percentPerfect, velocity: this._velocity.y});
+					//console.dir({depth: depth, percentPerfect: percentPerfect, velocity: this._velocity.y});
 					
 					this.skipCount++;
 					this.skippedThisFall = true;
@@ -96,6 +108,9 @@ Crafty.c("Fish", {
 	
 	
 	reset: function(){
+		
+		Game.fish.animate("swim", -1);
+		
 		this.x = -Game.fish.w;
 		this.y = Game.waterSurface() + 200;
 		
@@ -116,14 +131,20 @@ Crafty.c("Fish", {
 
 Crafty.c("Killer Fish", {
 	init: function(){
-		this.requires('2D, Canvas, Color, Persist')
+		this.requires('2D, Canvas, Persist, spr_shark, SpriteAnimation')
 			.attr({
 				x: -100,
 				y: Game.waterSurface() + 50,
 				w: 180,
 				h: 80
 			})
-			.color('rgb(255, 50, 20)');
+			.reel('mouthClosed', 10, 0, 0, 1)
+			.reel('mouthOpen', 10, 1, 0, 1)
+			.reel('eating', 150, 0, 0, 2)
+			;
+			//.color('rgb(255, 50, 20)');
+			
+			this.animate("mouthClosed");
 		
 		this.bind("EnterFrame", this.update);
 	},
@@ -135,6 +156,8 @@ Crafty.c("Killer Fish", {
 	reset: function(){
 		Game.killer.x = -this.w;
 		Game.killer.y = Game.waterSurface() + 50; 
+		
+		this.animate("mouthClosed");
 	},
 });
 

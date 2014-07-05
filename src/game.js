@@ -26,10 +26,30 @@ var Game = {
 		
 		Crafty.background('#87CEEB');
 		
+		
+		//Crafty.load([ "assets/Fish2.png" ], function(){
+			
+			Crafty.sprite(105, 37, 'assets/Fish.png', {
+				spr_fish: [0, 0]
+			});
+			
+			Crafty.sprite(300, 129, 'assets/Shark.png', {
+				spr_shark: [0, 0]
+			});
+			
+		// },
+		// function(e){
+			// 
+		// },
+		// function(e){
+			// console.log("Fail: " + e);
+		//});
+		
+		
 	},
 	
 	start: function() {
-		console.log('start');
+		//console.log('start');
 		Game.water = Crafty.e("Water");
 		
 		Game.fish = Crafty.e("Fish");
@@ -83,7 +103,18 @@ Crafty.scene('Game', function(){
 		.to({_acceleration: -200}, 0, createjs.Ease.quadOut)
 		.to({x: 150, y: Game.waterSurface() + 200}, 2, createjs.Ease.quadOut)
 		//.wait(2)
+		.call(function(){ Game.fish.animate("scaredSwim", -1); })
 		.to({x: 350}, 1, createjs.Ease.quadOut);		// Freak out
+	
+	// Angle upward
+	createjs.Tween
+		.get(Game.fish)
+		.wait(5)
+		.to({rotation: -25}, 0.5, createjs.Ease.quadIn)
+		.wait(0.7)
+		.call(function(){ Game.fish.animate("tailStraight"); })
+		.wait(0.8)
+		.to({rotation: 0}, 0.5, createjs.Ease.quadOut);
 		
 	createjs.Tween
 		.get(Game.fish._velocity)
@@ -138,12 +169,15 @@ Crafty.scene('Game', function(){
 
 
 Crafty.scene('EndGame', function(){
-	console.log("End Game");
+	//console.log("End Game");
 	
 	$("#skips").text(Game.fish.skipCount);
 	$("#distance").text((Game.fish.skipDistance / 10).toFixed(2) + "m");
 	$("#altitude").text(-(Game.fish.maxHeight / 100).toFixed(2) + "m");
 	
+	
+	Game.fish.animate('scaredSwim', -1);
+	Game.killer.animate("mouthOpen");
 	createjs.Tween.get(Crafty.viewport).to({y: -300}, 2);
 	
 	createjs.Tween
@@ -151,14 +185,19 @@ Crafty.scene('EndGame', function(){
 		.to({x: 450, y: Game.waterSurface() + 200}, 2, createjs.Ease.quadOut)
 		.call(function(){
 			Game.fish.visible = false;
-		})
-		;
+		});
 	
 	createjs.Tween
 		.get(Game.killer)
-		.to({x: 450, y: Game.waterSurface() + 180}, 2, createjs.Ease.quadOut)
+		.wait(1.2)
+		.call(function(){ Game.killer.animate("eating", 10); });
+	
+	createjs.Tween
+		.get(Game.killer)
+		.to({x: 400, y: Game.waterSurface() + 160}, 2, createjs.Ease.quadOut)
 		.wait(0.8)
 		.call(function(){
+			Game.killer.animate("mouthClosed", 1);
 			createjs.Tween.get(Crafty.viewport).to({y: 0}, 1);
 		})
 		.wait(0.2)
@@ -193,4 +232,7 @@ Crafty.scene('EndGame', function(){
 		
 	});
 });
+
+
+
 

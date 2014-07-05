@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg3529"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Shark.svg">
+  <defs
+     id="defs3531">
+    <linearGradient
+       id="linearGradient5379">
+      <stop
+         style="stop-color:#666666;stop-opacity:1;"
+         offset="0"
+         id="stop5381" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop5383" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5379-4">
+      <stop
+         style="stop-color:#666666;stop-opacity:1;"
+         offset="0"
+         id="stop5381-0" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop5383-7" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5379-6">
+      <stop
+         style="stop-color:#666666;stop-opacity:1;"
+         offset="0"
+         id="stop5381-5" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop5383-75" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5379-6"
+       id="linearGradient4534"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.45798164,0,0,0.73440172,-48.935547,-76.311759)"
+       x1="406.57736"
+       y1="141.39525"
+       x2="413.24237"
+       y2="296.04114" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5379-6-9"
+       id="linearGradient4534-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.45798164,0,0,0.73440172,187.22995,-77.655271)"
+       x1="406.57736"
+       y1="141.39525"
+       x2="413.24237"
+       y2="296.04114" />
+    <linearGradient
+       id="linearGradient5379-6-9">
+      <stop
+         style="stop-color:#666666;stop-opacity:1;"
+         offset="0"
+         id="stop5381-5-8" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop5383-75-1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5379-6-9"
+       id="linearGradient4737"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.45798164,0,0,0.73440172,187.22995,-77.655271)"
+       x1="406.57736"
+       y1="141.39525"
+       x2="413.24237"
+       y2="296.04114" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="240.94427"
+     inkscape:cy="938.90165"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-global="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:window-width="2560"
+     inkscape:window-height="1378"
+     inkscape:window-x="1672"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3534">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4720">
+      <path
+         sodipodi:nodetypes="ccccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4629"
+         d="m 232.12103,57.684234 -30.02568,5.177664 0.45231,3.336099 0.67847,0.744954 2.22386,-1.457519 2.03538,2.493977 2.67615,-2.493977 1.99771,3.400878 2.45,-3.627603 2.63847,3.951496 2.14847,-5.085122 3.65616,4.955565 1.80923,-6.672199 4.0331,6.024412 z"
+         style="fill:#fcffef;fill-opacity:1;stroke:#000000;stroke-width:0.22361849;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="rect4551"
+         d="m 229.30539,69.10378 -4.44383,-6.695333 -1.80923,6.672199 -3.65616,-4.955565 -2.14847,5.085122 -2.63847,-3.951496 -2.45,3.627603 -1.99771,-3.400878 -2.67615,2.493977 -2.03538,-2.493977 -2.22386,1.457519 -0.67847,-0.744954 1.35693,10.36458 c 25.23236,-8.106583 25.4008,-7.458797 25.4008,-7.458797 z"
+         style="fill:#fcffef;fill-opacity:1;stroke:#000000;stroke-width:0.22361849;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         style="fill:#b7b7b7;fill-rule:nonzero"
+         d="m 157.7635,41.522751 c -2.91816,-3.081011 -10.88419,-11.730344 -17.51876,-16.059114 -4.33442,-2.828019 -9.41312,-4.313906 -14.21303,-6.249295 -4.95853,-1.999343 -15.05418,-5.534504 -15.05418,-5.534504 0,0 3.76735,9.764566 5.14773,14.803109 1.01075,3.689347 1.52097,7.497881 2.28146,11.246819 9.34099,0.127738 30.01578,1.665245 39.35678,1.792985 z"
+         id="path37-1"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="caacacc" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         style="fill:url(#linearGradient4534);fill-opacity:1;fill-rule:nonzero"
+         d="m 14.752527,28.019187 c 0,0 2.231714,14.97541 3.034128,22.559903 0.743781,7.030289 1.896974,14.109432 1.645872,21.228799 -0.330873,9.381085 -2.109511,18.57777 -4.121835,27.402363 -0.918078,4.026028 -3.592293,11.497978 -3.592293,11.497978 0,0 8.953338,-11.54802 13.510458,-17.258441 3.278984,-4.108818 5.420116,-9.569778 9.951866,-12.233867 3.143227,-1.847816 7.130035,-2.092696 10.771314,-1.904592 4.228899,0.21846 8.140507,2.336172 12.215043,3.489195 3.081081,0.871893 6.279243,1.397114 9.249663,2.592883 4.836867,1.947124 8.855888,5.69373 13.786056,7.390792 5.745402,1.977682 11.902499,2.665331 17.963152,3.10049 14.378649,1.032397 28.838679,-0.364304 43.230579,-1.191884 8.75671,-0.503539 17.5369,-1.008583 26.21327,-2.294686 10.49755,-1.556055 21.21599,-2.829166 31.15707,-6.54328 4.11541,-2.517027 27.17813,-10.576103 12.83076,-13.395589 l 0,0 c 0,0 -8.27867,-1.016307 -12.70343,-6.067019 5.96809,-1.879234 11.75958,-1.705273 17.47567,-3.269709 5.3611,-1.467279 11.1924,-2.199112 15.66765,-5.707309 1.95291,-1.53091 4.98686,-5.527148 4.98686,-5.527148 -14.39998,-4.891329 -27.41899,-6.318455 -41.02379,-9.066139 -9.11176,-1.843913 -18.14407,-4.616087 -27.29284,-5.737512 -21.4412,-1.776584 -51.87118,0.173682 -69.34679,6.175373 -7.497421,2.725047 -10.817516,1.970844 -22.777556,7.342879 -4.074383,1.830071 -10.930716,3.943046 -16.409843,5.875827 -5.166077,1.822351 -10.056617,5.049386 -15.52385,5.393874 -4.167603,0.262599 -8.756144,-0.316105 -12.256144,-2.593794 -2.784245,-1.811898 -4.05618,-5.273343 -5.835108,-8.078768 C 22.83116,43.744705 14.752527,28.019185 14.752527,28.019187 z"
+         id="path11-2"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="caaacaaaaaaaaaccccasccccsaaaac" />
+      <g
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         transform="matrix(0.37420506,0.05459178,-0.02332526,0.17078263,41.026068,13.856266)"
+         id="g9643-0">
+        <path
+           sodipodi:nodetypes="ccccsccccc"
+           style="stroke:#cccccc;stroke-width:1.70908058;stroke-linecap:butt;stroke-linejoin:round"
+           inkscape:connector-curvature="0"
+           id="path15-0"
+           d="m 394.56004,79.624591 0,0 c 0,-14.41995 6.87639,-21.808047 21.87121,-21.808047 l 8.00472,0.185954 c 7.20079,0 15.20679,8.895662 21.47334,11.586815 5.46472,2.346811 2.95189,3.110568 2.95189,10.035278 l 0,0 c 0,14.41996 -12.15573,26.109629 -27.15061,26.109629 l 0,0 c -14.99482,0 -27.15055,-11.689669 -27.15055,-26.109629 z" />
+        <path
+           sodipodi:nodetypes="ccccscccsssccc"
+           style="fill:#f3f3f3;fill-rule:nonzero"
+           inkscape:connector-curvature="0"
+           id="path13-1"
+           d="m 394.56004,79.624591 0,0 c 0,-14.41995 8.77729,-20.977973 23.77211,-20.977973 l 0,0 c 7.20079,0 13.4787,1.350785 18.61864,6.002836 5.25149,4.753018 8.95852,4.939859 8.95852,4.939859 l -10.6735,3.411854 -21.60934,0.322235 c 12.16306,5.358586 13.161,12.499734 14.95195,15.921579 1.94495,3.716085 19.54339,-3.110081 17.6582,0.495262 -2.92125,5.586758 -8.4021,10.253678 -12.3868,12.425007 -3.9847,2.17133 -8.39051,3.56897 -12.13923,3.56897 l 0,0 c -14.99482,0 -27.15055,-11.689669 -27.15055,-26.109629 z" />
+      </g>
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 174.18281,38.475519 c -0.68747,1.879384 -4.21661,6.967538 -4.12489,11.276293 0.0917,4.308748 3.89607,12.14683 4.67529,14.576194"
+         id="path29-6"
+         inkscape:connector-curvature="0"
+         style="fill:#000000;fill-opacity:0;fill-rule:nonzero" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 172.82574,49.283636 c -1.25792,2.246107 -7.71545,8.327108 -7.54763,13.476627 0.16779,5.14951 7.12894,14.51703 8.55474,17.420434"
+         id="path31-0"
+         style="fill:none;stroke:#666666;stroke-width:1.35118556;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 178.66275,38.200493 c -0.68748,1.879376 -4.2166,6.967537 -4.12488,11.276285 0.0917,4.308748 3.89605,12.146837 4.67527,14.576201"
+         id="path33-7"
+         inkscape:connector-curvature="0"
+         style="fill:#000000;fill-opacity:0;fill-rule:nonzero" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 181.02303,48.954945 c -1.25794,2.246097 -7.71544,8.327106 -7.54761,13.476616 0.16779,5.149511 7.1289,14.517039 8.5547,17.420443"
+         id="path35-1"
+         style="fill:none;stroke:#666666;stroke-width:1.35118556;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 118.0773,33.249662 c 1.78766,-0.09173 6.64639,-0.596151 10.72591,-0.550379 4.07953,0.04576 11.45936,0.687479 13.75123,0.824976"
+         id="path39-7"
+         inkscape:connector-curvature="0"
+         style="fill:#000000;fill-opacity:0;fill-rule:nonzero" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         sodipodi:nodetypes="ascssaacacaacaaaacaa"
+         inkscape:connector-curvature="0"
+         style="fill:#ececec;fill-rule:nonzero"
+         d="m 148.52778,89.320974 c -3.94602,0.285203 -7.73741,0.108138 -11.86458,0.321301 -17.40343,0.898856 -32.13478,3.455823 -37.497249,6.242415 5.110519,0.720918 10.232959,1.304767 15.356699,1.721254 9.27079,0.753583 17.05757,-0.869366 26.33578,-1.331716 8.93327,-0.445165 39.46215,-3.192301 58.67123,-7.66685 6.88297,-1.603314 14.14302,-2.980963 20.07295,-6.825684 5.25505,-3.407159 12.78148,-13.771436 12.78148,-13.771436 0,0 -10.74957,1.783956 -16.13232,1.387898 -4.7191,-0.347228 -9.23856,-1.809138 -13.81293,-3.273781 4.88788,-0.396182 8.70167,0.391467 12.92774,-0.465255 4.89262,-0.991848 9.65506,-2.865323 13.99491,-5.332561 1.35884,-0.772514 0,0 3.67603,-2.911345 -5.76747,1.060785 -3.8556,0.653637 -5.76747,1.060785 -2.16797,0.461689 -4.28275,1.164719 -6.46268,1.566167 -5.28121,0.972571 -10.99153,0.04753 -15.98138,2.032108 -2.41755,0.961518 -6.31014,2.000512 -6.30405,4.602252 0.0138,5.910814 6.57011,4.866819 14.37074,10.388602 -3.10579,6.121959 -16.35588,5.819492 -24.82487,7.599317 -12.98739,2.729402 -26.30346,3.69984 -39.54003,4.656529 z"
+         id="path11-1-7" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 112.09918,92.5349 c 0,0 -11.27533,5.183193 -16.446537,8.57062 -1.332152,0.87263 -3.71658,3.00202 -3.71658,3.00202 0,0 -1.067692,-3.12362 -1.985339,-4.471893 C 89.15751,98.470182 88.225575,97.289404 86.98427,96.621083 82.308711,94.103741 81.695071,94.717296 76.657007,93.039272 75.265188,92.575704 72.0737,91.283653 70.923855,90.37266 c -1.248242,-0.988937 -6.53757,-6.241943 -6.53757,-6.241943 0,0 19.302405,2.955177 28.854512,4.084895 6.404269,0.757414 18.858383,4.319288 18.858383,4.319288 z"
+         id="path25-7"
+         inkscape:connector-curvature="0"
+         style="fill:#cccccc;fill-rule:nonzero"
+         sodipodi:nodetypes="cscsssscsc" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 151.93042,64.074215 c 0,0 -8.43899,2.230932 -12.72401,2.80165 -6.52023,0.868421 -19.66346,0.934569 -19.66346,0.934569 0,0 6.12629,3.298937 8.48265,6.069572 2.07231,2.436613 4.62632,8.873278 4.62632,8.873278 0,0 8.84318,-3.491384 12.33904,-7.00414 3.04702,-3.061751 6.93946,-11.674929 6.93946,-11.674929 z"
+         id="path23-7"
+         inkscape:connector-curvature="0"
+         style="fill:#808080;fill-rule:nonzero"
+         sodipodi:nodetypes="cscscsc" />
+    </g>
+    <g
+       id="g4703"
+       transform="translate(-8,1.34351)">
+      <path
+         sodipodi:nodetypes="ccccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4629-8"
+         d="m 466.47965,48.927656 -27.92544,12.186858 1.23464,3.132064 0.83651,0.561713 1.81224,-1.945687 2.57128,1.936804 2.00439,-3.06009 2.75092,2.826533 1.51448,-4.107104 3.50447,3.208501 0.87417,-5.450707 4.73219,3.940988 0.16633,-6.911134 5.35309,4.88915 z"
+         style="fill:#fcffef;fill-opacity:1;stroke:#000000;stroke-width:0.22361849;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="rect4551-2"
+         d="m 463.74856,75.986853 -2.1508,-7.742682 -3.78741,5.783337 -1.94091,-5.84448 -3.61824,4.169256 -1.28437,-4.574514 -3.45336,2.690034 -0.84575,-3.852473 -3.31716,1.542128 -1.16253,-3.001871 -2.56601,0.696799 -0.41428,-0.9185 -1.92103,10.274991 c 26.5024,0.109872 26.46185,0.777975 26.46185,0.777975 z"
+         style="fill:#fcffef;fill-opacity:1;stroke:#000000;stroke-width:0.22361849;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         style="fill:#b7b7b7;fill-rule:nonzero"
+         d="m 393.929,40.17924 c -2.91816,-3.08101 -10.88419,-11.730345 -17.51876,-16.059115 -4.33442,-2.828019 -9.41312,-4.313906 -14.21303,-6.249295 -4.95853,-1.999343 -15.05418,-5.534504 -15.05418,-5.534504 0,0 3.76735,9.764566 5.14773,14.803109 1.01075,3.689345 1.52097,7.497885 2.28146,11.246815 9.34099,0.12774 30.01578,1.66525 39.35678,1.79299 z"
+         id="path37-1-6"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="caacacc" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         style="fill:url(#linearGradient4737);fill-opacity:1;fill-rule:nonzero"
+         d="m 250.91802,26.675675 c 0,0 2.23172,14.975415 3.03413,22.559905 0.74378,7.03029 1.89698,14.10943 1.64587,21.2288 -0.33087,9.38108 -2.10951,18.57777 -4.12183,27.40236 -0.91808,4.02603 -3.59229,11.49798 -3.59229,11.49798 0,0 8.95333,-11.54802 13.51045,-17.25844 3.27899,-4.10882 5.42012,-9.56978 9.95187,-12.23387 3.14323,-1.84782 7.13004,-2.0927 10.77131,-1.90459 4.2289,0.21846 8.14051,2.33617 12.21505,3.48919 3.08108,0.8719 6.27924,1.39712 9.24966,2.59289 4.83687,1.94712 8.85589,5.69373 13.78606,7.39079 5.7454,1.97768 11.9025,2.66533 17.96315,3.10049 14.37865,1.0324 28.83868,-0.36431 43.23058,-1.19189 8.75671,-0.50353 17.5369,-1.00858 26.21327,-2.29468 10.49755,-1.55606 21.21599,-2.82917 31.15707,-6.54328 4.11541,-2.51703 27.17813,-10.5761 12.83076,-13.39559 l 0,0 c 0,0 -8.27867,-1.01631 -12.70343,-6.06702 5.96809,-1.87923 11.56475,-6.328536 17.60194,-8.951818 5.0978,-2.215101 11.1924,-2.19911 15.66765,-5.70731 1.95291,-1.53091 4.98686,-5.52715 4.98686,-5.52715 -14.39998,-4.89132 -27.54526,-0.636342 -41.15006,-3.384022 -9.11176,-1.84392 -18.14407,-4.61609 -27.29284,-5.73752 -21.4412,-1.77658 -51.87118,0.17369 -69.34679,6.17538 -7.49742,2.72504 -10.81752,1.97084 -22.77756,7.34288 -4.07438,1.83007 -10.93071,3.94304 -16.40984,5.87582 -5.16608,1.82235 -10.05662,5.04939 -15.52385,5.39388 -4.1676,0.2626 -8.75615,-0.31611 -12.25615,-2.5938 -2.78424,-1.8119 -4.05618,-5.27334 -5.8351,-8.07877 -4.7273,-7.4551 -12.80594,-23.180617 -12.80594,-23.180615 z"
+         id="path11-2-6"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="caaacaaaaaaaaaccccasccccsaaaac" />
+      <g
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         transform="matrix(0.37420506,0.05459178,-0.02332526,0.17078263,277.19157,12.512754)"
+         id="g9643-0-0">
+        <path
+           sodipodi:nodetypes="ccccsccccc"
+           style="stroke:#cccccc;stroke-width:1.70908058;stroke-linecap:butt;stroke-linejoin:round"
+           inkscape:connector-curvature="0"
+           id="path15-0-3"
+           d="m 394.56004,79.624591 0,0 c 0,-14.41995 6.87639,-21.808047 21.87121,-21.808047 l 8.00472,0.185954 c 7.20079,0 15.20679,8.895662 21.47334,11.586815 5.46472,2.346811 2.95189,3.110568 2.95189,10.035278 l 0,0 c 0,14.41996 -12.15573,26.109629 -27.15061,26.109629 l 0,0 c -14.99482,0 -27.15055,-11.689669 -27.15055,-26.109629 z" />
+        <path
+           sodipodi:nodetypes="ccccscccsssccc"
+           style="fill:#f3f3f3;fill-rule:nonzero"
+           inkscape:connector-curvature="0"
+           id="path13-1-8"
+           d="m 394.56004,79.624591 0,0 c 0,-14.41995 8.77729,-20.977973 23.77211,-20.977973 l 0,0 c 7.20079,0 13.4787,1.350785 18.61864,6.002836 5.25149,4.753018 8.95852,4.939859 8.95852,4.939859 l -10.6735,3.411854 -21.60934,0.322235 c 12.16306,5.358586 13.161,12.499734 14.95195,15.921579 1.94495,3.716085 19.54339,-3.110081 17.6582,0.495262 -2.92125,5.586758 -8.4021,10.253678 -12.3868,12.425007 -3.9847,2.17133 -8.39051,3.56897 -12.13923,3.56897 l 0,0 c -14.99482,0 -27.15055,-11.689669 -27.15055,-26.109629 z" />
+      </g>
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 410.34831,37.13201 c -0.68747,1.87938 -4.21661,6.96754 -4.12489,11.27629 0.0917,4.30875 3.89607,12.14683 4.67529,14.57619"
+         id="path29-6-0"
+         inkscape:connector-curvature="0"
+         style="fill:#000000;fill-opacity:0;fill-rule:nonzero" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 408.99124,47.94012 c -1.25792,2.24611 -7.71545,8.32711 -7.54763,13.47663 0.16779,5.14951 7.12894,14.51703 8.55474,17.42044"
+         id="path31-0-1"
+         style="fill:none;stroke:#666666;stroke-width:1.35118556;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 414.82825,36.85698 c -0.68748,1.87938 -4.2166,6.96754 -4.12488,11.27629 0.0917,4.30874 3.89605,12.14683 4.67527,14.5762"
+         id="path33-7-2"
+         inkscape:connector-curvature="0"
+         style="fill:#000000;fill-opacity:0;fill-rule:nonzero" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 417.18853,47.61143 c -1.25794,2.2461 -7.71544,8.32711 -7.54761,13.47662 0.16779,5.14951 7.1289,14.51704 8.5547,17.42044"
+         id="path35-1-5"
+         style="fill:none;stroke:#666666;stroke-width:1.35118556;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 354.2428,31.90615 c 1.78766,-0.0917 6.64639,-0.59615 10.72591,-0.55038 4.07953,0.0458 11.45936,0.68748 13.75123,0.82498"
+         id="path39-7-0"
+         inkscape:connector-curvature="0"
+         style="fill:#000000;fill-opacity:0;fill-rule:nonzero" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         sodipodi:nodetypes="ascssaacacaacaaaacaa"
+         inkscape:connector-curvature="0"
+         style="fill:#ececec;fill-rule:nonzero"
+         d="m 384.69328,87.97746 c -3.94602,0.28521 -7.73741,0.10814 -11.86458,0.3213 -17.40343,0.89886 -32.13478,3.45583 -37.49725,6.24242 5.11052,0.72092 10.23296,1.30477 15.3567,1.72125 9.27079,0.75359 17.05757,-0.86936 26.33578,-1.33171 8.93327,-0.44517 39.46215,-3.1923 58.67123,-7.66685 6.88297,-1.60332 13.41911,-4.444024 20.07295,-6.82569 4.28551,-1.533947 12.78148,-4.806326 12.78148,-4.806326 0,0 -13.53191,-1.937906 -19.78646,-4.516114 -3.68954,-1.520875 -7.35219,-2.344849 -10.15879,-6.33488 4.88788,-0.39618 8.15807,-2.888396 12.17013,-4.50586 4.50839,-1.817567 9.1869,-3.350723 13.36356,-5.837636 1.88537,-1.122607 1.51523,-1.136422 5.19126,-4.047772 -5.76747,1.06079 -5.27136,1.315776 -7.91405,1.944673 -1.89843,0.451782 -3.86364,0.667607 -5.70506,1.313622 -5.13774,1.802448 -10.04745,4.285599 -14.71869,7.082873 -2.23213,1.336665 -6.31014,2.00051 -6.30405,4.60225 0.0138,5.91082 6.57011,4.86682 14.37074,10.38861 -3.10579,6.12196 -16.35588,5.81949 -24.82487,7.59931 -12.98739,2.72941 -26.30346,3.69984 -39.54003,4.65653 z"
+         id="path11-1-7-9" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 348.26468,91.19139 c 0,0 -11.27533,5.18319 -16.44654,8.57062 -1.33215,0.87263 -3.71658,3.00202 -3.71658,3.00202 0,0 -1.06769,-3.12362 -1.98534,-4.47189 -0.79321,-1.16547 -1.72515,-2.34625 -2.96645,-3.01457 -4.67556,-2.51734 -5.2892,-1.90379 -10.32727,-3.58181 -1.39181,-0.46357 -4.5833,-1.75562 -5.73315,-2.66661 -1.24824,-0.98894 -6.53757,-6.24194 -6.53757,-6.24194 0,0 19.30241,2.95517 28.85451,4.08489 6.40427,0.75741 18.85839,4.31929 18.85839,4.31929 z"
+         id="path25-7-4"
+         inkscape:connector-curvature="0"
+         style="fill:#cccccc;fill-rule:nonzero"
+         sodipodi:nodetypes="cscsssscsc" />
+      <path
+         inkscape:export-ydpi="119.65564"
+         inkscape:export-xdpi="119.65564"
+         inkscape:export-filename="E:\Cell\Sites\Skippy Fish\assets\Shark.png"
+         d="m 388.09592,62.7307 c 0,0 -8.43899,2.23094 -12.72401,2.80165 -6.52023,0.86842 -19.66346,0.93457 -19.66346,0.93457 0,0 6.12629,3.29894 8.48265,6.06957 2.07231,2.43662 4.62632,8.87328 4.62632,8.87328 0,0 8.84318,-3.49138 12.33904,-7.00414 3.04702,-3.06175 6.93946,-11.67493 6.93946,-11.67493 z"
+         id="path23-7-7"
+         inkscape:connector-curvature="0"
+         style="fill:#808080;fill-rule:nonzero"
+         sodipodi:nodetypes="cscscsc" />
+    </g>
+  </g>
+</svg>
