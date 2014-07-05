@@ -61,7 +61,7 @@ Crafty.c("Fish", {
 				var percentPerfect = 1 - (Math.abs(depth - 10) / 20);
 				
 				if(this._velocity.y < 0 && depth < 30 && depth > -10){
-					this._velocity.y = -(this._velocity.y * 1.4 * percentPerfect) - 30;
+					this._velocity.y = -(this._velocity.y * 1.2 * percentPerfect);
 					
 					var jumpQuality = "";
 					if(percentPerfect > 0.90){
