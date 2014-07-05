@@ -3,6 +3,7 @@
 var Game = {
 	
 	fish: null,
+	killer: null,
 	
 	width: function(){
 		return 800;
@@ -35,6 +36,10 @@ var Game = {
 		Game.fish.x = -Game.fish.w;
 		Game.fish.y = Game.waterSurface() + 200;
 		
+		Game.killer = Crafty.e("Killer Fish");
+		Game.killer.x = -Game.killer.w;
+		Game.killer.y = Game.waterSurface() + 50;
+		
 		Crafty.scene('Menu');
 	},
 };
@@ -53,7 +58,6 @@ Crafty.scene('Menu', function(){
 	});
 	
 	
-		
 	this.bind("EnterFrame", function(data){
 		createjs.Tween.tick(data.dt/1000, false);
 	});
@@ -62,17 +66,45 @@ Crafty.scene('Menu', function(){
 
 Crafty.scene('Game', function(){
 	
-	var airborn = false;
+	var oceanTweenDone = false;
+	Game.fish.airborn = false;
+	Game.fish._acceleration = 0;
 	//Game.fish.tween({x: 50}, 2000);
 	
-	createjs.Tween.get(Crafty.viewport).to({y: -(Game.fish.y / 4)}, 2).wait(0.5).call(function(){ airborn = true; });
-	createjs.Tween.get(Game.fish).wait(2).to({x: 50}, 2, createjs.Ease.quadOut);
-	createjs.Tween.get(Game.fish._velocity).wait(1.5).to({y: 300}, 2, createjs.Ease.quadOut);
+	createjs.Tween
+		.get(Crafty.viewport)
+		.to({y: -(Game.fish.y / 4)}, 2)
+		.wait(0.2)
+		.call(function(){ oceanTweenDone = true; });
+		
+	createjs.Tween
+		.get(Game.fish)
+		.wait(2)
+		.to({_acceleration: -200}, 0, createjs.Ease.quadOut)
+		.to({x: 150, y: Game.waterSurface() + 200}, 2, createjs.Ease.quadOut)
+		//.wait(2)
+		.to({x: 350}, 1, createjs.Ease.quadOut);		// Freak out
+		
+	createjs.Tween
+		.get(Game.fish._velocity)
+		.wait(4)
+		.to({y: 350}, 1.5, createjs.Ease.sineIn);
+	
+	createjs.Tween
+		.get(Game.killer)
+		.wait(3.5)
+		.to({x: 90 - Game.killer.w }, 1.5, createjs.Ease.sineIn)
+		.wait(0.5)
+		.to({x: 40 - Game.killer.w }, 3, createjs.Ease.sineOut);
 	
 	
 	
 	Crafty.addEvent(this, $("#gameContainer")[0], 'mousedown', function(e) {
-		
+		Game.fish.skip = true;
+	});
+	
+	Crafty.addEvent(this, $("#gameContainer")[0], 'mouseup', function(e) {
+		Game.fish.skip = true;
 	});
 	
 	
@@ -88,11 +120,49 @@ Crafty.scene('Game', function(){
 		//console.log(Crafty.lastEvent);
 		
 		// Make the ocean come up to meet the fish
-		if(airborn){
+		if(oceanTweenDone){
 			Crafty.viewport.y = -(Game.fish.y / 4);
 		}
 		//createjs.Tween.get(Crafty.viewport).to({y: -(Game.fish.y / 4)}, 1);
+		
+		if(Game.fish.dead){
+			// Play final animation
+			Crafty.scene('EndGame');
+		}
 	});
+	
+}, function(){
+	this.unbind("EnterFrame");
 });
 
+
+
+Crafty.scene('EndGame', function(){
+	console.log("End Game");
+	
+	
+	createjs.Tween
+		.get(Game.fish)
+		.to({x: 450, y: Game.waterSurface() + 200}, 2, createjs.Ease.quadOut)
+		//.wait(2)
+		//.to({x: 350}, 1, createjs.Ease.quadOut);		// Freak out
+		.call(function(){ Game.fish.visible = false; })
+		;
+	
+	createjs.Tween
+		.get(Game.killer)
+		.to({x: 450, y: Game.waterSurface() + 180}, 2, createjs.Ease.quadOut)
+		.wait(1)
+		.to({x: 950, y: Game.waterSurface() + 120}, 2, createjs.Ease.quadOut)
+		;
+	
+	
+	
+	this.bind("EnterFrame", function(data){
+		var deltaTime = data.dt / 1000;
+		createjs.Tween.tick(deltaTime, false);
+		
+		createjs.Tween.get(Crafty.viewport).to({y: -(Game.fish.y / 1.5)}, 1);
+	});
+});
 
