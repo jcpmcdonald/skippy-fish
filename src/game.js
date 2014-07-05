@@ -67,7 +67,7 @@ Crafty.scene('Menu', function(){
 Crafty.scene('Game', function(){
 	
 	var oceanTweenDone = false;
-	Game.fish.airborn = false;
+	Game.fish.airbornOnce = false;
 	Game.fish._acceleration = 0;
 	//Game.fish.tween({x: 50}, 2000);
 	
@@ -140,21 +140,50 @@ Crafty.scene('Game', function(){
 Crafty.scene('EndGame', function(){
 	console.log("End Game");
 	
+	$("#skips").text(Game.fish.skipCount);
+	$("#distance").text((Game.fish.skipDistance / 10).toFixed(2) + "m");
+	$("#altitude").text(-(Game.fish.maxHeight / 100).toFixed(2) + "m");
+	
+	createjs.Tween.get(Crafty.viewport).to({y: -300}, 2);
 	
 	createjs.Tween
 		.get(Game.fish)
 		.to({x: 450, y: Game.waterSurface() + 200}, 2, createjs.Ease.quadOut)
-		//.wait(2)
-		//.to({x: 350}, 1, createjs.Ease.quadOut);		// Freak out
-		.call(function(){ Game.fish.visible = false; })
+		.call(function(){
+			Game.fish.visible = false;
+		})
 		;
 	
 	createjs.Tween
 		.get(Game.killer)
 		.to({x: 450, y: Game.waterSurface() + 180}, 2, createjs.Ease.quadOut)
-		.wait(1)
-		.to({x: 950, y: Game.waterSurface() + 120}, 2, createjs.Ease.quadOut)
+		.wait(0.8)
+		.call(function(){
+			createjs.Tween.get(Crafty.viewport).to({y: 0}, 1);
+		})
+		.wait(0.2)
+		.call(function(){
+			$("#title").show("slide", { direction: "left" }, 900);
+			$("#clickToStart").text("(click anywhere to restart)");
+			$("#clickToStart").show("slide", { direction: "left" }, 600);
+			$("#score").show("slide", { direction: "left" }, 600);
+			
+			$("#gameContainer").one('mousedown', function(e) {
+				$("#title").hide("slide", { direction: "right" }, 900);
+				$("#clickToStart").hide("slide", { direction: "right" }, 600);
+				$("#score").hide("slide", { direction: "right" }, 600);
+				
+				Game.fish.reset();
+				Game.killer.reset();
+				
+				Crafty.scene('Game');
+			});
+			
+		})
+		.to({x: 950, y: Game.waterSurface() + 120}, 1, createjs.Ease.cubicIn)
 		;
+	
+	
 	
 	
 	
@@ -162,7 +191,6 @@ Crafty.scene('EndGame', function(){
 		var deltaTime = data.dt / 1000;
 		createjs.Tween.tick(deltaTime, false);
 		
-		createjs.Tween.get(Crafty.viewport).to({y: -(Game.fish.y / 1.5)}, 1);
 	});
 });
 

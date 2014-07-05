@@ -4,6 +4,10 @@
 	height: 500px;
 	position: relative;
 	width: 800px;
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
 #viewport
 {
@@ -36,3 +40,23 @@
 	color: whitesmoke;
 	font-family: 'Lobster', cursive;
 }
+
+#score
+{
+	color: whitesmoke;
+	font-family: 'Lobster', cursive;
+	margin-top: 155px;
+	font-size: 22px;
+}
+
+#jumpQuality
+{
+	font-family: 'Lobster', cursive;
+	font-size: 22px;
+	color: green;
+	position: absolute;
+	
+	right: 275px;
+	top: 241px;
+}
+
