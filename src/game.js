@@ -42,6 +42,10 @@ var Game = {
 				spr_cloud: [0, 0]
 			});
 			
+			Crafty.sprite(57, 12, 'assets/Splash.png', {
+				spr_splash: [0, 0]
+			});
+			
 		// },
 		// function(e){
 			// 
@@ -110,18 +114,18 @@ Crafty.scene('Game', function(){
 		.to({_acceleration: -200}, 0, createjs.Ease.quadOut)
 		.to({x: 150, y: Game.waterSurface() + 200}, 2, createjs.Ease.quadOut)
 		//.wait(2)
-		.call(function(){ Game.fish.animate("scaredSwim", -1); })
-		.to({x: 350}, 1, createjs.Ease.quadOut);		// Freak out
+		.call(function(){ Game.fish.animate("scaredSwim", -1); })		// Freak out
+		.to({x: 350}, 1, createjs.Ease.quadOut);
 	
 	// Angle upward
 	createjs.Tween
 		.get(Game.fish)
 		.wait(5)
-		.to({rotation: -25}, 0.5, createjs.Ease.quadIn)
+		//.to({rotation: -25}, 0.8, createjs.Ease.quadIn)
 		.wait(0.7)
-		.call(function(){ Game.fish.animate("tailStraight"); })
-		.wait(0.8)
-		.to({rotation: 0}, 0.5, createjs.Ease.quadOut);
+		.call(function(){ Game.fish.animate("tailStraight"); });
+		//.wait(0.8)
+		//.to({rotation: 0}, 0.5, createjs.Ease.quadOut);
 		
 	createjs.Tween
 		.get(Game.fish._velocity)
@@ -182,10 +186,14 @@ Crafty.scene('EndGame', function(){
 	$("#distance").text((Game.fish.skipDistance / 10).toFixed(2) + "m");
 	$("#altitude").text(-(Game.fish.maxHeight / 100).toFixed(2) + "m");
 	
-	
+	Crafty.e("Splash")._speed = 0;
 	Game.fish.animate('scaredSwim', -1);
 	Game.killer.animate("mouthOpen");
 	createjs.Tween.get(Crafty.viewport).to({y: -300}, 2);
+	
+	createjs.Tween
+		.get(Game.fish)
+		.to({rotation: 0}, 0.5);
 	
 	createjs.Tween
 		.get(Game.fish)

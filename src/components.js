@@ -44,24 +44,41 @@ Crafty.c("Fish", {
 			this.y -= (this._velocity.y * deltaTime);
 			this.skipDistance += (this._velocity.x * deltaTime);
 			
-			Game.cloud._x -= this._velocity.x * deltaTime * 0.5;
+			
+			// Update the cloud from here, I'm lazy
+			//Game.cloud._x -= this._velocity.x * deltaTime * 0.5;
+			
+			
+			this.rotation = Math.min(this._velocity.y, 300) / 300 * -25;
+			if(!this.airbornOnce){
+				this.rotation = Math.min(this.rotation, 0);
+			}
 		}
 		depth = this.y + this.h - Game.waterSurface();
 		
+		// Record the max height
 		if(depth < this.maxHeight)
 		{
 			this.maxHeight = depth;
 		}
 		
+		// Detect when they leave the water
 		if(depth < -5){
+			
+			// Splash on first exit
+			if(!this.airbornOnce){
+				Crafty.e("Splash");
+			}
 			this.airbornOnce = true;
-			if(this._velocity.y > 0)
-			{
+			
+			// Prevent jumping twice in one fall
+			if(this._velocity.y > 0){
 				//console.log("skip reset");
 				this.skippedThisFall = false;
 			}
 		}
 		
+		//
 		if(this.airbornOnce && depth > 30){
 			this.dead = true;
 		}
@@ -103,6 +120,9 @@ Crafty.c("Fish", {
 					
 					this.skipCount++;
 					this.skippedThisFall = true;
+					
+					
+					Crafty.e("Splash");
 				}
 			}
 		}
@@ -193,14 +213,30 @@ Crafty.c("Cloud", {
 
 
 Crafty.c("Splash", {
+	
+	_speed: 200,
+	
+	
 	init: function(){
-		this.requires('2D, Canvas, Persist, spr_cloud')
+		this.requires('2D, Canvas, Persist, spr_splash, SpriteAnimation')
 			.attr({
-				x: Game.width() - 100,
-				y: 100,
-				w: 150,
-				h: 150
-			});
+				x: (Game.width() / 2) - 21,
+				y: Game.waterSurface() - 11,
+				w: 42,
+				h: 11
+			})
+			.reel('splash', 800, 0, 0, 3);
+		
+		this.animate('splash');
+		this.bind("EnterFrame", this.update);
+	},
+	
+	update: function(data){
+		this._x -= this._speed * (data.dt / 1000);
+		
+		if(!this.isPlaying()){
+			this.destroy();
+		}
 	},
 });
 
