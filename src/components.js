@@ -44,8 +44,11 @@ Crafty.c("Fish", {
 		if(!this.dead){
 			this._velocity.y += (this._acceleration * deltaTime);
 			this.y -= (this._velocity.y * deltaTime);
-			this.skipDistance += (this._velocity.x * deltaTime);
 			
+			if(this.airbornOnce){
+				this.skipDistance += (this._velocity.x * deltaTime);
+				$("#currentDistance").text((this.skipDistance / 10).toFixed(2) + "m");
+			}
 			
 			// Update the cloud from here, I'm lazy
 			//Game.cloud._x -= this._velocity.x * deltaTime * 0.5;
@@ -59,9 +62,9 @@ Crafty.c("Fish", {
 		depth = this.y + this.h - Game.waterSurface();
 		
 		// Record the max height
-		if(depth < this.maxHeight)
-		{
+		if(depth < this.maxHeight){
 			this.maxHeight = depth;
+			$("#currentAltitude").text(-(depth / 100).toFixed(2) + "m");
 		}
 		
 		if(depth < 15 && !this.airbornAudioPlayed){
@@ -127,6 +130,7 @@ Crafty.c("Fish", {
 					
 					this.skipCount++;
 					this.skippedThisFall = true;
+					$("#currentSkips").text(this.skipCount);
 					
 					
 					Crafty.e("Splash");
@@ -157,6 +161,12 @@ Crafty.c("Fish", {
 		this.maxHeight = 0;
 		
 		this.airbornAudioPlayed = false;
+		
+		
+		$("#currentSkips").text(this.skipCount);
+		$("#currentDistance").text((this.skipDistance / 10).toFixed(2) + "m");
+		$("#currentAltitude").text(-(this.maxHeight / 100).toFixed(2) + "m");
+		
 	},
 });
 

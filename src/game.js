@@ -9,6 +9,10 @@ var Game = {
 	assetsLoaded: false,
 	DOMReady: false,
 	
+	maxSkips: 0,
+	maxDistance: 0,
+	maxAltitude: 0,
+	
 	width: function(){
 		return 800;
 	},
@@ -27,9 +31,11 @@ var Game = {
 		//Crafty.init("100%", "100%", "viewport");
 		//Crafty.init("100%", "100%", "gameContainer");
 		Crafty.init("800", "500", "viewport");
-		
 		Crafty.background('#87CEEB');
 		
+		Game.maxSkips = Crafty.storage('maxSkips') | 0;
+		Game.maxDistance = Crafty.storage('maxDistance') | 0;
+		Game.maxAltitude = Crafty.storage('maxAltitude') | 0;
 		
 		Crafty.load([
 				'assets/Fish.png', 
@@ -135,6 +141,8 @@ var Game = {
 			Crafty.scene('Menu');
 		}
 	},
+	
+	
 };
 
 
@@ -249,9 +257,33 @@ Crafty.scene('Game', function(){
 Crafty.scene('EndGame', function(){
 	//console.log("End Game");
 	
-	$("#skips").text(Game.fish.skipCount);
-	$("#distance").text((Game.fish.skipDistance / 10).toFixed(2) + "m");
-	$("#altitude").text(-(Game.fish.maxHeight / 100).toFixed(2) + "m");
+	if(Game.fish.skipCount > Game.maxSkips){
+		Game.maxSkips = Game.fish.skipCount;
+		Crafty.storage('maxSkips', Game.maxSkips);
+		$("#skipRecord").show();
+	} else {
+		$("#skipRecord").hide();
+	}
+	
+	if(Game.fish.skipDistance > Game.maxDistance){
+		Game.maxDistance = Game.fish.skipDistance;
+		Crafty.storage('maxDistance', Game.maxDistance);
+		$("#distanceRecord").show();
+	} else {
+		$("#distanceRecord").hide();
+	}
+	
+	if(Game.fish.maxHeight < Game.maxAltitude){
+		Game.maxAltitude = Game.fish.maxHeight;
+		Crafty.storage('maxAltitude', Game.maxAltitude);
+		$("#altitudeRecord").show();
+	} else {
+		$("#altitudeRecord").hide();
+	}
+	
+	$("#mostSkips").text(Game.maxSkips);
+	$("#mostDistance").text((Game.maxDistance / 10).toFixed(2) + "m");
+	$("#mostAltitude").text(-(Game.maxAltitude / 100).toFixed(2) + "m");
 	
 	Crafty.e("Splash")._speed = 0;
 	Crafty.audio.play("water_reentry");

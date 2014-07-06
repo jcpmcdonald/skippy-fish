@@ -45,8 +45,19 @@
 {
 	color: whitesmoke;
 	font-family: 'Lobster', cursive;
-	margin-top: 155px;
+	margin-top: 126px;
 	font-size: 22px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#currentScore
+{
+	color: whitesmoke;
+	font-family: 'Lobster', cursive;
+	margin-top: 0px;
+	font-size: 22px;
+	text-align: center;
 }
 
 #jumpQuality
