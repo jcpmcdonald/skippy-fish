@@ -4,6 +4,7 @@ var Game = {
 	
 	fish: null,
 	killer: null,
+	cloud: null,
 	
 	width: function(){
 		return 800;
@@ -37,6 +38,10 @@ var Game = {
 				spr_shark: [0, 0]
 			});
 			
+			Crafty.sprite(199, 132, 'assets/Cloud.png', {
+				spr_cloud: [0, 0]
+			});
+			
 		// },
 		// function(e){
 			// 
@@ -59,6 +64,8 @@ var Game = {
 		Game.killer = Crafty.e("Killer Fish");
 		Game.killer.x = -Game.killer.w;
 		Game.killer.y = Game.waterSurface() + 50;
+		
+		Game.cloud = Crafty.e("Cloud");
 		
 		Crafty.scene('Menu');
 	},

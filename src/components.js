@@ -43,6 +43,8 @@ Crafty.c("Fish", {
 			this._velocity.y += (this._acceleration * deltaTime);
 			this.y -= (this._velocity.y * deltaTime);
 			this.skipDistance += (this._velocity.x * deltaTime);
+			
+			Game.cloud._x -= this._velocity.x * deltaTime * 0.5;
 		}
 		depth = this.y + this.h - Game.waterSurface();
 		
@@ -176,4 +178,29 @@ Crafty.c("Water", {
 	
 });
 
+
+Crafty.c("Cloud", {
+	init: function(){
+		this.requires('2D, Canvas, Persist, spr_cloud')
+			.attr({
+				x: Game.width() - 100,
+				y: 100,
+				w: 150,
+				h: 150
+			});
+	},
+});
+
+
+Crafty.c("Splash", {
+	init: function(){
+		this.requires('2D, Canvas, Persist, spr_cloud')
+			.attr({
+				x: Game.width() - 100,
+				y: 100,
+				w: 150,
+				h: 150
+			});
+	},
+});
 
