@@ -12,6 +12,8 @@ Crafty.c("Fish", {
 	skipDistance: 0,
 	maxHeight: 0,
 	
+	airbornAudioPlayed: false,
+	
 	init: function(){
 		this.requires('2D, Canvas, Collision, Persist, spr_fish, SpriteAnimation')
 			.attr({
@@ -62,8 +64,13 @@ Crafty.c("Fish", {
 			this.maxHeight = depth;
 		}
 		
+		if(depth < 15 && !this.airbornAudioPlayed){
+			this.airbornAudioPlayed = true;
+			Crafty.audio.play("water_splash");
+		}
+		
 		// Detect when they leave the water
-		if(depth < -5){
+		if(depth < 0){
 			
 			// Splash on first exit
 			if(!this.airbornOnce){
@@ -123,6 +130,7 @@ Crafty.c("Fish", {
 					
 					
 					Crafty.e("Splash");
+					Crafty.audio.play("water_splash");
 				}
 			}
 		}
@@ -147,6 +155,8 @@ Crafty.c("Fish", {
 		this.skipCount = 0;
 		this.skipDistance = 0;
 		this.maxHeight = 0;
+		
+		this.airbornAudioPlayed = false;
 	},
 });
 

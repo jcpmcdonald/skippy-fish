@@ -6,6 +6,9 @@ var Game = {
 	killer: null,
 	cloud: null,
 	
+	assetsLoaded: false,
+	DOMReady: false,
+	
 	width: function(){
 		return 800;
 	},
@@ -28,7 +31,30 @@ var Game = {
 		Crafty.background('#87CEEB');
 		
 		
-		//Crafty.load([ "assets/Fish2.png" ], function(){
+		Crafty.load([
+				'assets/Fish.png', 
+				'assets/Shark.png',
+				'assets/Cloud.png',
+				'assets/Splash.png',
+				'assets/water.mp3',
+				'assets/water.ogg',
+				'assets/water.wav',
+				'assets/waterReentry.mp3',
+				'assets/waterReentry.ogg',
+				'assets/waterReentry.wav',
+				'assets/swim.mp3',
+				'assets/swim.ogg',
+				'assets/swim.wav',
+				'assets/bubbles.mp3',
+				'assets/bubbles.ogg',
+				'assets/bubbles.wav',
+				'assets/scream.mp3',
+				'assets/scream.ogg',
+				'assets/scream.wav',
+				'assets/boneCracking.mp3',
+				'assets/boneCracking.ogg',
+				'assets/boneCracking.wav'
+			], function(){
 			
 			Crafty.sprite(105, 37, 'assets/Fish.png', {
 				spr_fish: [0, 0]
@@ -46,32 +72,68 @@ var Game = {
 				spr_splash: [0, 0]
 			});
 			
-		// },
-		// function(e){
-			// 
-		// },
-		// function(e){
-			// console.log("Fail: " + e);
-		//});
+			Crafty.audio.add({
+				water_splash: ['assets/water.mp3',
+							   'assets/water.ogg',
+							   'assets/water.wav',]
+			});
+			
+			Crafty.audio.add({
+				water_reentry: ['assets/waterReentry.mp3',
+							   'assets/waterReentry.ogg',
+							   'assets/waterReentry.wav',]
+			});
+			
+			Crafty.audio.add({
+				water_swim: ['assets/swim.mp3',
+							   'assets/swim.ogg',
+							   'assets/swim.wav',]
+			});
+			
+			Crafty.audio.add({
+				water_bubbles: ['assets/bubbles.mp3',
+							   'assets/bubbles.ogg',
+							   'assets/bubbles.wav',]
+			});
+			
+			Crafty.audio.add({
+				water_scream: ['assets/scream.mp3',
+							   'assets/scream.ogg',
+							   'assets/scream.wav',]
+			});
+			
+			Crafty.audio.add({
+				boneCracking: ['assets/boneCracking.mp3',
+							   'assets/boneCracking.ogg',
+							   'assets/boneCracking.wav',]
+			});
+			
+			Game.assetsLoaded = true;
+			Game.start();
+			
+		});
 		
 		
 	},
 	
 	start: function() {
-		//console.log('start');
-		Game.water = Crafty.e("Water");
-		
-		Game.fish = Crafty.e("Fish");
-		Game.fish.x = -Game.fish.w;
-		Game.fish.y = Game.waterSurface() + 200;
-		
-		Game.killer = Crafty.e("Killer Fish");
-		Game.killer.x = -Game.killer.w;
-		Game.killer.y = Game.waterSurface() + 50;
-		
-		Game.cloud = Crafty.e("Cloud");
-		
-		Crafty.scene('Menu');
+		if(Game.assetsLoaded && Game.DOMReady)
+		{
+			//console.log('start');
+			Game.water = Crafty.e("Water");
+			
+			Game.fish = Crafty.e("Fish");
+			Game.fish.x = -Game.fish.w;
+			Game.fish.y = Game.waterSurface() + 200;
+			
+			Game.killer = Crafty.e("Killer Fish");
+			Game.killer.x = -Game.killer.w;
+			Game.killer.y = Game.waterSurface() + 50;
+			
+			Game.cloud = Crafty.e("Cloud");
+			
+			Crafty.scene('Menu');
+		}
 	},
 };
 
@@ -102,6 +164,8 @@ Crafty.scene('Game', function(){
 	Game.fish._acceleration = 0;
 	//Game.fish.tween({x: 50}, 2000);
 	
+	Crafty.audio.play("water_swim");
+	
 	createjs.Tween
 		.get(Crafty.viewport)
 		.to({y: -(Game.fish.y / 4)}, 2)
@@ -114,7 +178,10 @@ Crafty.scene('Game', function(){
 		.to({_acceleration: -200}, 0, createjs.Ease.quadOut)
 		.to({x: 150, y: Game.waterSurface() + 200}, 2, createjs.Ease.quadOut)
 		//.wait(2)
-		.call(function(){ Game.fish.animate("scaredSwim", -1); })		// Freak out
+		.call(function(){
+			Crafty.audio.play("water_bubbles");
+			Game.fish.animate("scaredSwim", -1);		// Freak out
+		})
 		.to({x: 350}, 1, createjs.Ease.quadOut);
 	
 	// Angle upward
@@ -187,12 +254,19 @@ Crafty.scene('EndGame', function(){
 	$("#altitude").text(-(Game.fish.maxHeight / 100).toFixed(2) + "m");
 	
 	Crafty.e("Splash")._speed = 0;
+	Crafty.audio.play("water_reentry");
+	
+	
 	Game.fish.animate('scaredSwim', -1);
 	Game.killer.animate("mouthOpen");
 	createjs.Tween.get(Crafty.viewport).to({y: -300}, 2);
 	
 	createjs.Tween
 		.get(Game.fish)
+		.call(function(){
+			Crafty.audio.play("water_scream");
+			Crafty.audio.play("water_swim");
+		})
 		.to({rotation: 0}, 0.5);
 	
 	createjs.Tween
@@ -205,7 +279,8 @@ Crafty.scene('EndGame', function(){
 	createjs.Tween
 		.get(Game.killer)
 		.wait(1.2)
-		.call(function(){ Game.killer.animate("eating", 10); });
+		.call(function(){ Game.killer.animate("eating", 10);
+			Crafty.audio.play("boneCracking"); });
 	
 	createjs.Tween
 		.get(Game.killer)
@@ -214,6 +289,7 @@ Crafty.scene('EndGame', function(){
 		.call(function(){
 			Game.killer.animate("mouthClosed", 1);
 			createjs.Tween.get(Crafty.viewport).to({y: 0}, 1);
+			Crafty.audio.play("water_swim");
 		})
 		.wait(0.2)
 		.call(function(){
