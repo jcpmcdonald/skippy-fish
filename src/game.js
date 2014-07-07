@@ -129,6 +129,7 @@ var Game = {
 			Game.water = Crafty.e("Water");
 			
 			Game.fish = Crafty.e("Fish");
+			Game.fish._acceleration = 0;
 			Game.fish.x = -Game.fish.w;
 			Game.fish.y = Game.waterSurface() + 200;
 			
@@ -183,10 +184,11 @@ Crafty.scene('Game', function(){
 	createjs.Tween
 		.get(Game.fish)
 		.wait(2)
-		.to({_acceleration: -200}, 0, createjs.Ease.quadOut)
+		//.to({_acceleration: -200}, 0, createjs.Ease.quadOut)
 		.to({x: 150, y: Game.waterSurface() + 200}, 2, createjs.Ease.quadOut)
 		//.wait(2)
 		.call(function(){
+			Game.fish._acceleration = -200;
 			Crafty.audio.play("water_bubbles");
 			Game.fish.animate("scaredSwim", -1);		// Freak out
 		})
